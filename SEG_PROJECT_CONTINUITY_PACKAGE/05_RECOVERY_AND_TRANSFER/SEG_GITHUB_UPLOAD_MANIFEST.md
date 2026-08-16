@@ -8,11 +8,12 @@
 
 **Repository visibility at verification:** Public (`isPrivate: false`). No visibility change was requested or performed.
 
-**Published commit:** `42e21eb43ae2371625a960c92210d103bd972d76`
+**Initial source-publication commit:** `42e21eb43ae2371625a960c92210d103bd972d76`  
+**Current synchronized commit:** `8984c38871ad7772e3fdc6c2fdc1040e76a5bf9d`
 
-**Remote verification:** `origin/main` contains the published source snapshot commit and contains 288 tracked files; later documentation-only continuity commits may follow.
+**Remote verification:** `origin/main` is synchronized at merge commit `8984c38871ad7772e3fdc6c2fdc1040e76a5bf9d`; the initial source-publication commit remains in its history. The current synchronization added 30 approved SEG governance, continuity, review-preparation, and evidence paths; local and remote heads match.
 
-**Purpose:** Record the exact safe source-publication boundary for the first upload to the empty repository.
+**Purpose:** Record the exact safe source-publication boundary and subsequent governance-artifact synchronization for the approved SEG repository state.
 
 ## Included
 
@@ -34,5 +35,5 @@ The target deployment’s Production Readiness report remains `REMAINING PRODUCT
 
 ## Publication evidence
 
-The initial source publication was verified after the GitHub push. The remote `main` branch contains source snapshot commit `42e21eb43ae2371625a960c92210d103bd972d76` and contains 288 tracked files; continuity documentation updates are tracked separately in the same branch. The remote repository is public; no repository-visibility change was performed. The local continuity archive was rebuilt separately; its final checksum is recorded in the sidecar file `SEG_PROJECT_CONTINUITY_PACKAGE_FINAL.sha256`.
+The initial source publication remains represented by commit `42e21eb43ae2371625a960c92210d103bd972d76`. The current remote `main` branch was verified at merge commit `8984c38871ad7772e3fdc6c2fdc1040e76a5bf9d`, which preserves the local SEG artifact commit and the pre-existing remote Manus-skills commit. Local and remote heads match, the repository is public, and no repository-visibility change was performed. The current synchronization is documented in `SEG_GITHUB_UPLOAD_VERIFICATION.md`; the continuity archive was not rebuilt in this operation.
 

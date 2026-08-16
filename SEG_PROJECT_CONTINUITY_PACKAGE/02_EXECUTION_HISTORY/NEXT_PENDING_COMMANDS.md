@@ -23,11 +23,11 @@ pnpm build
 
 **Evidence:** `SEG_CONTENT_LIBRARY_STRUCTURE_COMPLETION_REPORT.md`. The approved empty directory structure was created with 27 directories and 0 content files. No medical content was imported or processed, and existing libraries, governance records, Atlas structure, and Visual Assets Registry were preserved.
 
-## Current authorized action — GitHub source publication — COMPLETED (16 August 2026)
+## Current authorized action — GitHub source publication and governance-artifact synchronization — COMPLETED (16 August 2026)
 
-The verified source snapshot was published to `KISSCRISIS/manus` on `main` at commit `42e21eb43ae2371625a960c92210d103bd972d76`. Remote verification found 288 tracked files, no forbidden dependency/build/secret paths, and a clean local worktree. The repository visibility was verified as public; no visibility change was performed.
+The approved SEG governance and continuity artifacts were published to `KISSCRISIS/manus` on `main` at merge commit `8984c38871ad7772e3fdc6c2fdc1040e76a5bf9d`. The merge preserved the prior remote Manus-skills commit `2283ba403f39ccaa15154f8718cc90bf310b719c` and the local SEG artifact commit `c22166a6ea43813836b8e90196e76b89e230762f`. Post-push verification confirmed matching local and remote heads, a clean worktree before the follow-up continuity-record update, 30 approved SEG paths synchronized, no secrets or prohibited paths, and a public repository. No force-push or history rewrite was used.
 
-Evidence: `SEG_GITHUB_UPLOAD_MANIFEST.md`, `LAST_MANUS_STATE.md`, `CURRENT_STATUS_CHECKLIST.md`, and the remote commit/tree verification record. The continuity archive was rebuilt separately with 43 files; checksum recorded in sidecar `SEG_PROJECT_CONTINUITY_PACKAGE_FINAL.sha256`.
+Evidence: `SEG_GITHUB_UPLOAD_VERIFICATION.md`, `LAST_MANUS_STATE.md`, `CURRENT_STATUS_CHECKLIST.md`, and the remote commit/tree verification record. The continuity archive was not rebuilt in this operation; archive rebuild remains a separate authorized action.
 
 ## Pre-integration governance build — COMPLETED (16 August 2026)
 

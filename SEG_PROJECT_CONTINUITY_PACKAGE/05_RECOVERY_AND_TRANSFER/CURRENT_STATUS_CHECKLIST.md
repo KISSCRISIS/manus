@@ -17,10 +17,10 @@
 | Drug Reference activation | Blocked | Requires separate audit and explicit authorization. |
 | Next.js migration | Deferred | Use the migration plan only after a separate authorization checkpoint. |
 | Target deployment URL | Verified read-only with gaps | `https://seg-guide-bjjkqn7t.manus.space` loaded public surfaces and assets; target `/healthz` returned 404 and the runtime was not proven to expose the local Phase 3 health endpoint. | 
-| GitHub source publication | Complete | `https://github.com/KISSCRISIS/manus`, branch `main`, commit `42e21eb43ae2371625a960c92210d103bd972d76`, 288 tracked files; repository visibility verified as public. |
-| Pre-integration continuity artifacts | Created and synchronized locally | `SEG_FINAL_RECONCILIATION_REPORT.md`, `SEG_CONTENT_INTEGRATION_PLAN.md`, `SEG_CONTENT_INTAKE_CHECKLIST.md`, and governance-only library artifacts are synchronized under `03_CONTENT_PREPARATION_STATE`; archive rebuild and publication require a separate explicit command. |
+| GitHub source publication and governance-artifact synchronization | Complete | `https://github.com/KISSCRISIS/manus`, branch `main`, merge commit `8984c38871ad7772e3fdc6c2fdc1040e76a5bf9d`; local and remote heads match; 30 approved SEG paths synchronized; repository visibility verified as public. See `SEG_GITHUB_UPLOAD_VERIFICATION.md`. |
+| Pre-integration continuity artifacts | Created and synchronized to `main` | `SEG_FINAL_RECONCILIATION_REPORT.md`, `SEG_CONTENT_INTEGRATION_PLAN.md`, `SEG_CONTENT_INTAKE_CHECKLIST.md`, and governance-only library artifacts are synchronized under `03_CONTENT_PREPARATION_STATE`; archive rebuild remains a separate operation. |
 | Preview/runtime relink | Complete — runtime-only | Stale PID `6650` from `/tmp/seg-phase3-delivery-verify` was stopped; `/home/ubuntu/seg-phase1` now runs `PORT=4318 pnpm dev` through Node/Express; `GET /healthz` returned 200 and the SEG interface rendered. No source files were changed. |
-| Continuity package | Checkpoint records updated locally | `SEG_PROJECT_CONTINUITY_PACKAGE_FINAL.md`, `LAST_MANUS_STATE.md`, `CURRENT_STATUS_CHECKLIST.md`, and `NEXT_PENDING_COMMANDS.md` include the Preview/runtime checkpoint; archive rebuild and publication require a separate explicit command. |
+| Continuity package | Checkpoint records updated and publication verified | `SEG_PROJECT_CONTINUITY_PACKAGE_FINAL.md`, `LAST_MANUS_STATE.md`, `CURRENT_STATUS_CHECKLIST.md`, `NEXT_PENDING_COMMANDS.md`, and `SEG_GITHUB_UPLOAD_VERIFICATION.md` record the synchronized state; archive rebuild remains a separate operation. |
 
 ## Known external blocker
 

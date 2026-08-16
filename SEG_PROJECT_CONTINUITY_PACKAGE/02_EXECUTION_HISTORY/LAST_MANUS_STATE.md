@@ -23,13 +23,13 @@
 
 **Repository publication completed; pre-integration governance and Batch 1 clinical-review preparation completed.**
 
-Accessibility Review, the Vite/Express Phase 3 implementation, the read-only target-deployment Production Readiness Check, the empty `SEG_CONTENT_LIBRARY` structure, the governed pre-integration artifacts, the Batch 1 clinical-review preparation structure, and the safe source publication are complete. Commit `42e21eb43ae2371625a960c92210d103bd972d76` is on `main` at `https://github.com/KISSCRISIS/manus`. The repository was verified as public; no visibility change was performed. The pre-integration build added only governance documents and an empty manifest/schema; it did not change authentication, the database, protected routing, medical content, or approved assets.
+Accessibility Review, the Vite/Express Phase 3 implementation, the read-only target-deployment Production Readiness Check, the empty `SEG_CONTENT_LIBRARY` structure, the governed pre-integration artifacts, the Batch 1 clinical-review preparation structure, and the safe source publication are complete. The synchronized repository state is `main` at merge commit `8984c38871ad7772e3fdc6c2fdc1040e76a5bf9d` on `https://github.com/KISSCRISIS/manus`; its parents preserve the local SEG artifact commit `c22166a6ea43813836b8e90196e76b89e230762f` and the remote Manus-skills commit `2283ba403f39ccaa15154f8718cc90bf310b719c`. The repository was verified as public; no visibility change was performed. The synchronized SEG delta contains governance, continuity, review-preparation, and evidence files only; it did not change authentication, the database, protected routing, medical content, or approved assets.
 
 ## Pending / next authorized gate
 
 | Pending workstream | Boundary |
 |---|---|
-| GitHub source publication | Completed | `SEG_GITHUB_UPLOAD_MANIFEST.md`; commit `42e21eb43ae2371625a960c92210d103bd972d76` verified on `origin/main`; 288 tracked files; forbidden paths absent. |
+| GitHub source publication and governance-artifact synchronization | Completed | `SEG_GITHUB_UPLOAD_VERIFICATION.md`; merge commit `8984c38871ad7772e3fdc6c2fdc1040e76a5bf9d` verified on `origin/main`; local and remote heads match; 30 approved SEG paths synchronized; secret and JSON checks passed; repository is public. |
 | READ_ONLY governed source intake | Ready when a source package is supplied | Run `SEG_CONTENT_INTAKE_CHECKLIST.md` without modifying the source. Medical review, rights review, references, taxonomy, and audit evidence are required before any approval. |
 | Medical-content integration | Blocked | Requires a separate implementation authorization, approved records only, a reversible adapter, tests, and rollback evidence. |
 

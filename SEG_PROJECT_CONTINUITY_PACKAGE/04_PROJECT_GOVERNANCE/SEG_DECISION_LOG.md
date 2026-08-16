@@ -23,5 +23,7 @@
 | D-013 | إعداد خطة المراجعة السريرية وسجل المراجعة لـ269 صفاً في Batch 1 دون تعديل أو اعتماد أو تفعيل المحتوى | Accepted / Structure-only; medical gate remains blocked | `SEG_BATCH1_CLINICAL_REVIEW_PLAN.md`, `SEG_BATCH1_REVIEW_TRACKER.csv`, and `SEG_CONTENT_LIBRARY/03_MEDICAL_GOVERNANCE/Audit_Trail/2026-08-16_BATCH1_CLINICAL_REVIEW_PREPARATION.md` |
 | D-014 | فصل runtime المؤقت القديم وإعادة ربط Preview بالمشروع الحالي `/home/ubuntu/seg-phase1` عبر Node/Express و`PORT=4318 pnpm dev`، مع تحقق `GET /healthz = 200` وظهور واجهة SEG، دون تعديل الكود أو التصميم أو OAuth أو قاعدة البيانات أو schema أو المحتوى | Accepted / Runtime-only checkpoint; no medical or implementation authorization | `SEG_PROJECT_CONTINUITY_PACKAGE/02_EXECUTION_HISTORY/SEG_PREVIEW_RUNTIME_RELINK_CHECKPOINT_2026-08-16.md` and `SEG_PREVIEW_RELINK_REPORT.md` |
 
+| D-015 | مزامنة ملفات الحوكمة والاستمرارية الآمنة المعتمدة إلى `KISSCRISIS/manus` على `main` بعد فحص الأسرار والمسارات، مع دمج non-fast-forward لحفظ commit البعيد الموجود مسبقاً، دون force-push أو تغيير حدود التطبيق أو تفعيل المحتوى الطبي | Accepted / Completed; repository publication only | `SEG_GITHUB_UPLOAD_VERIFICATION.md`; merge commit `8984c38871ad7772e3fdc6c2fdc1040e76a5bf9d`; local and remote heads match; repository public; 30 approved SEG paths synchronized. |
+
 **Checkpoint boundary:** This decision records an operational runtime relink only. It does not authorize content intake, medical review approval, schema work, database changes, code changes, deployment publication, commit, or push.
 

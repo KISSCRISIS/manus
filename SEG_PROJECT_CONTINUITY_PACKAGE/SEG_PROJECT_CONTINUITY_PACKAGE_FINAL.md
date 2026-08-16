@@ -77,7 +77,7 @@ SEG_PROJECT_CONTINUITY_PACKAGE/
 
 ### Current
 
-**Repository publication completed.** The verified source snapshot is published to `KISSCRISIS/manus` on `main` at commit `42e21eb43ae2371625a960c92210d103bd972d76`. Remote verification found 288 tracked files and no forbidden dependency, build, or secret paths. The repository is public; no visibility change was performed. No unscoped implementation should start without separate authorization.
+**Repository publication and governance-artifact synchronization completed.** The verified SEG state is published to `KISSCRISIS/manus` on `main` at merge commit `8984c38871ad7772e3fdc6c2fdc1040e76a5bf9d`. The merge preserves local SEG artifact commit `c22166a6ea43813836b8e90196e76b89e230762f` and the pre-existing remote Manus-skills commit `2283ba403f39ccaa15154f8718cc90bf310b719c`. Local and remote heads match, the repository is public, and no visibility change was performed. No unscoped implementation should start without separate authorization.
 
 ### Pending
 

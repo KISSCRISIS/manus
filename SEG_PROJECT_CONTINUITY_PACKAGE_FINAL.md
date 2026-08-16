@@ -94,7 +94,7 @@ SEG_PROJECT_CONTINUITY_PACKAGE/
 
 ### Current
 
-**Repository publication and pre-integration governance plus Batch 1 clinical-review preparation completed locally.** The verified source snapshot is published to `KISSCRISIS/manus` on `main` at commit `42e21eb43ae2371625a960c92210d103bd972d76`. Remote verification found 288 tracked files and no forbidden dependency, build, or secret paths. The repository is public; no visibility change was performed. The new pre-integration artifacts are synchronized locally but have not been pushed as a new commit; publication of this checkpoint requires a separate explicit command.
+**Repository publication, pre-integration governance, and Batch 1 clinical-review preparation synchronized.** The verified SEG state is published to `KISSCRISIS/manus` on `main` at merge commit `8984c38871ad7772e3fdc6c2fdc1040e76a5bf9d`. The merge preserves local SEG artifact commit `c22166a6ea43813836b8e90196e76b89e230762f` and the pre-existing remote Manus-skills commit `2283ba403f39ccaa15154f8718cc90bf310b719c`. Local and remote heads match; the repository is public; no visibility change was performed. The synchronized delta contains governance, continuity, review-preparation, and evidence files only, and no new medical-content activation or application implementation was performed.
 
 The internal runtime checkpoint was recorded locally at `SEG_PROJECT_CONTINUITY_PACKAGE/02_EXECUTION_HISTORY/SEG_PREVIEW_RUNTIME_RELINK_CHECKPOINT_2026-08-16.md`. Local branch `main` and local cached `origin/main` were both read as `416345fcf309695d15360845d1f0f232ec64b172` during the read-only checkpoint check. This does not overwrite earlier historical publication records; it distinguishes current local evidence from prior continuity records.
 
