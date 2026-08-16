@@ -4,13 +4,13 @@
 
 **Package purpose:** Preserve the project’s approved visual state, execution history, content-preparation boundary, governance decisions, recovery instructions, and the exact next checkpoint before any new implementation.
 
-**Checkpoint:** `Final repository publication after Command 02 and Command 03 completion`
+**Checkpoint:** `Internal operational checkpoint after Preview/Runtime Relink — 2026-08-16`
 
 **Last state file:** [`02_EXECUTION_HISTORY/LAST_MANUS_STATE.md`](SEG_PROJECT_CONTINUITY_PACKAGE/02_EXECUTION_HISTORY/LAST_MANUS_STATE.md)
 
 ## Executive state
 
-تم إنجاز Final UI Consistency Audit وDashboard UX Final Review وVisual Asset Registry Final Check وAccessibility Review وPhase 3 Option A وCommand 02 وCommand 03. أُجري فحص Production Readiness على النشر الفعلي بوضع READ_ONLY وسُجلت الفجوات دون تعديل. أُنشئت بنية `SEG_CONTENT_LIBRARY` فارغة فقط. الحالة الحالية هي تجهيز نشر المصدر الآمن إلى مستودع GitHub المؤكد، مع بقاء Visual Freeze وقواعد OAuth وDatabase والمسارات ثابتة.
+تم إنجاز Final UI Consistency Audit وDashboard UX Final Review وVisual Asset Registry Final Check وAccessibility Review وPhase 3 Option A وCommand 02 وCommand 03. أُجري فحص Production Readiness على النشر الفعلي بوضع READ_ONLY وسُجلت الفجوات دون تعديل. أُنشئت بنية `SEG_CONTENT_LIBRARY` ثم أضيفت إليها وثائق حوكمة فقط وmanifest/schema فارغان. اكتملت Final Reconciliation وخطة التكامل وبوابة intake للقراءة فقط، وأُعدّت بنية المراجعة السريرية لـ269 صفاً في Batch 1 دون تحميل أو تعديل أو اعتماد محتوى، ثم تم فصل runtime مؤقت قديم من `/tmp/seg-phase3-delivery-verify` وإعادة تشغيل Preview من `/home/ubuntu/seg-phase1` عبر Node/Express مع تحقق `GET /healthz = 200` وظهور واجهة SEG. بقيت Visual Freeze وقواعد OAuth وDatabase والمسارات والمحتوى الطبي غير مفعّلة.
 
 لا يفتح هذا الملف مرحلة تنفيذ جديدة، ولا يغيّر Visual Freeze أو Dashboard أو OAuth أو قاعدة البيانات أو المحتوى الطبي. هو نقطة استمرارية قابلة للنقل والاستعادة.
 
@@ -39,13 +39,26 @@ SEG_PROJECT_CONTINUITY_PACKAGE/
 │   ├── SEG_VISUAL_PRODUCTION_RUNTIME_EVIDENCE.md
 │   ├── SEG_VISUAL_PRODUCTION_HTTP_EVIDENCE.txt
 │   ├── SEG_VISUAL_PRODUCTION_ASSET_EVIDENCE.txt
+│   ├── SEG_PREVIEW_RUNTIME_RELINK_CHECKPOINT_2026-08-16.md
 │   └── NEXT_PENDING_COMMANDS.md
 ├── 03_CONTENT_PREPARATION_STATE/
 │   ├── SEG_FINAL_CONTENT_PREPARATION_DECISION_REPORT.md
 │   ├── SEG_CONTENT_PREPARATION_VERIFICATION_REPORT.md
 │   ├── SEG_CONTENT_LIBRARY_PLAN.md
 │   ├── SEG_CONTENT_LIBRARY_STRUCTURE_COMPLETION_REPORT.md
+│   ├── SEG_FINAL_RECONCILIATION_REPORT.md
+│   ├── SEG_CONTENT_INTEGRATION_PLAN.md
+│   ├── SEG_CONTENT_INTAKE_CHECKLIST.md
+│   ├── SEG_BATCH1_CLINICAL_REVIEW_PLAN.md
+│   ├── SEG_BATCH1_REVIEW_TRACKER.csv
+│   ├── SEG_CONTENT_LIBRARY_GOVERNANCE/
+│   │   ├── README.md
+│   │   ├── manifest.json
+│   │   ├── manifest.schema.json
+│   │   └── GOVERNANCE_TEMPLATES.md
 │   └── SEG_CONTENT_NEXT_STEPS.md
+├── SEG_CONTENT_LIBRARY/03_MEDICAL_GOVERNANCE/Audit_Trail/
+│   └── 2026-08-16_BATCH1_CLINICAL_REVIEW_PREPARATION.md
 ├── 04_PROJECT_GOVERNANCE/
 │   ├── SEG_MASTER_PROJECT_STATE.md
 │   ├── SEG_ARCHITECTURE_RULES.md
@@ -73,15 +86,23 @@ SEG_PROJECT_CONTINUITY_PACKAGE/
 - Accessibility Review: A11Y-01 through A11Y-06 pass; targeted tests pass 6/6; `pnpm check` and `pnpm build` pass.
 - Phase 3 Option A Vite/Express production-readiness implementation.
 - Command 02 Visual Production Readiness Check: completed in READ_ONLY mode with documented gaps; no code or design changes were made.
-- Command 03 `SEG_CONTENT_LIBRARY` structure: completed as an empty 27-directory structure with 0 content files.
+- Command 03 `SEG_CONTENT_LIBRARY` structure: completed as a 27-directory structure with 4 governance-only artifacts and 0 medical/content records.
+- Final Reconciliation: completed in READ_ONLY mode against the current repository, available design authority, and content-governance records.
+- Pre-integration build: completed with `SEG_CONTENT_INTEGRATION_PLAN.md`, `SEG_CONTENT_INTAKE_CHECKLIST.md`, empty manifest/schema, and governance templates. Medical-content activation remains blocked.
+- Batch 1 clinical-review preparation: completed as a governance-only plan and 269-row review queue. All rows remain `NOT_APPROVED`; no medical content was loaded, modified, approved, or published.
+- Preview/runtime relink checkpoint: completed for the existing project only. The stale runtime rooted at `/tmp/seg-phase3-delivery-verify` was stopped; `/home/ubuntu/seg-phase1` runs `PORT=4318 pnpm dev` through Node/Express; `GET /healthz` returned 200 and the SEG interface rendered. No application source or protected boundary was changed.
 
 ### Current
 
-**Repository publication completed.** The verified source snapshot is published to `KISSCRISIS/manus` on `main` at commit `42e21eb43ae2371625a960c92210d103bd972d76`. Remote verification found 288 tracked files and no forbidden dependency, build, or secret paths. The repository is public; no visibility change was performed. No unscoped implementation should start without separate authorization.
+**Repository publication and pre-integration governance plus Batch 1 clinical-review preparation completed locally.** The verified source snapshot is published to `KISSCRISIS/manus` on `main` at commit `42e21eb43ae2371625a960c92210d103bd972d76`. Remote verification found 288 tracked files and no forbidden dependency, build, or secret paths. The repository is public; no visibility change was performed. The new pre-integration artifacts are synchronized locally but have not been pushed as a new commit; publication of this checkpoint requires a separate explicit command.
 
-### Pending
+The internal runtime checkpoint was recorded locally at `SEG_PROJECT_CONTINUITY_PACKAGE/02_EXECUTION_HISTORY/SEG_PREVIEW_RUNTIME_RELINK_CHECKPOINT_2026-08-16.md`. Local branch `main` and local cached `origin/main` were both read as `416345fcf309695d15360845d1f0f232ec64b172` during the read-only checkpoint check. This does not overwrite earlier historical publication records; it distinguishes current local evidence from prior continuity records.
 
-- No new implementation wave is pending. Any further work requires a separate explicit authorization.
+### Pending / next authorized gate
+
+- READ_ONLY governed source intake when a separately supplied source package is available.
+- Medical-content integration remains blocked until provenance, checksum, references, rights, taxonomy, medical-review decision, audit evidence, and a separate implementation authorization are complete.
+- Publication of the new pre-integration checkpoint requires a separate explicit push command.
 
 The separate `scripts/audit-final-package.test.ts` remains externally blocked by two missing assets in the external package: `SEG_Dashboard_Brain_Heart_Core_Clean_Approved.png` and `SEG_ATLAS_VISUAL_ASSETS_HERO_v1.0.png`. No placeholder files are to be created.
 
@@ -107,8 +128,15 @@ Do not upload `.env`, secrets, OAuth tokens, database credentials, `node_modules
 - `SEG_TRANSFER_BUNDLE.zip` — the broader source and archive transfer package.
 - `SEG_PHASE3_DELIVERY.zip` — the focused Vite/Express production delivery package.
 - `SEG_VISUAL_PRODUCTION_READINESS_REPORT.md` — Command 02 target-deployment evidence and documented gaps.
-- `SEG_CONTENT_LIBRARY_STRUCTURE_COMPLETION_REPORT.md` — Command 03 empty-structure completion evidence.
+- `SEG_CONTENT_LIBRARY_STRUCTURE_COMPLETION_REPORT.md` — Command 03 structure evidence, updated to distinguish governance-only artifacts from medical content.
+- `SEG_FINAL_RECONCILIATION_REPORT.md` — current repository and governance reconciliation.
+- `SEG_CONTENT_INTEGRATION_PLAN.md` — staged reversible integration plan.
+- `SEG_CONTENT_INTAKE_CHECKLIST.md` — read-only source-package intake gate.
+- `SEG_BATCH1_CLINICAL_REVIEW_PLAN.md` — structure-only clinical review workflow and approval conditions.
+- `SEG_BATCH1_REVIEW_TRACKER.csv` — 269-row review queue with all rows `NOT_APPROVED`.
+- `SEG_CONTENT_LIBRARY/03_MEDICAL_GOVERNANCE/Audit_Trail/2026-08-16_BATCH1_CLINICAL_REVIEW_PREPARATION.md` — append-only preparation event.
 - `SEG_GITHUB_UPLOAD_MANIFEST.md` — safe publication boundary and remote verification evidence.
+- `SEG_PROJECT_CONTINUITY_PACKAGE/02_EXECUTION_HISTORY/SEG_PREVIEW_RUNTIME_RELINK_CHECKPOINT_2026-08-16.md` — internal runtime relink checkpoint and recovery instructions.
 
 ## References
 
@@ -116,7 +144,7 @@ The detailed reports in each numbered directory are the evidence records. The pa
 
 ## Final archive verification
 
-تم تحديث الحزمة بعد إغلاق Accessibility Review وإضافة أدلة Command 02 وCommand 03. سيُعاد استخراج الأرشيف في مجلد نظيف وفحصه دون تشغيل أي كود بعد إعادة الضغط، مع التحقق من عدم وجود `node_modules` أو `.git` أو `.env` أو ملفات مفاتيح (`.pem`/`.key`) أو محتوى طبي داخل `SEG_CONTENT_LIBRARY`.
+تم تحديث سجلات الحزمة محلياً بعد إغلاق Accessibility Review وإضافة أدلة Command 02 وCommand 03 وإكمال Preview/runtime relink checkpoint. لم يُعاد ضغط الأرشيف ولم يُنشر هذا checkpoint؛ أي إعادة ضغط أو SHA-256 جديد أو push تحتاج أمراً منفصلاً وصريحاً. عند إعادة الضغط، يجب استخراج الأرشيف في مجلد نظيف وفحصه دون تشغيل أي كود، مع التحقق من عدم وجود `node_modules` أو `.git` أو `.env` أو ملفات مفاتيح (`.pem`/`.key`) أو محتوى طبي داخل `SEG_CONTENT_LIBRARY`.
 
 **Final ZIP:** `SEG_PROJECT_CONTINUITY_PACKAGE_FINAL.zip`
 
