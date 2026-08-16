@@ -57,6 +57,7 @@ SEG_PROJECT_CONTINUITY_PACKAGE/
     ├── CURRENT_STATUS_CHECKLIST.md
     ├── SEG_PROJECT_TRANSFER_CONTEXT.md
     ├── SEG_NEXTJS_MIGRATION_PLAN.md
+    ├── SEG_GITHUB_UPLOAD_MANIFEST.md
     └── DEPLOYMENT.md
 ```
 
@@ -76,11 +77,11 @@ SEG_PROJECT_CONTINUITY_PACKAGE/
 
 ### Current
 
-**Final repository publication checkpoint.** The verified source snapshot is being prepared for upload to `KISSCRISIS/manus` on `main`. No unscoped implementation should start.
+**Repository publication completed.** The verified source snapshot is published to `KISSCRISIS/manus` on `main` at commit `42e21eb43ae2371625a960c92210d103bd972d76`. Remote verification found 288 tracked files and no forbidden dependency, build, or secret paths. The repository is public; no visibility change was performed. No unscoped implementation should start without separate authorization.
 
 ### Pending
 
-- GitHub source publication with verified exclusions for secrets, dependencies, build outputs, and temporary local artifacts.
+- No new implementation wave is pending. Any further work requires a separate explicit authorization.
 
 The separate `scripts/audit-final-package.test.ts` remains externally blocked by two missing assets in the external package: `SEG_Dashboard_Brain_Heart_Core_Clean_Approved.png` and `SEG_ATLAS_VISUAL_ASSETS_HERO_v1.0.png`. No placeholder files are to be created.
 
@@ -107,6 +108,7 @@ Do not upload `.env`, secrets, OAuth tokens, database credentials, `node_modules
 - `SEG_PHASE3_DELIVERY.zip` — the focused Vite/Express production delivery package.
 - `SEG_VISUAL_PRODUCTION_READINESS_REPORT.md` — Command 02 target-deployment evidence and documented gaps.
 - `SEG_CONTENT_LIBRARY_STRUCTURE_COMPLETION_REPORT.md` — Command 03 empty-structure completion evidence.
+- `SEG_GITHUB_UPLOAD_MANIFEST.md` — safe publication boundary and remote verification evidence.
 
 ## References
 
@@ -118,4 +120,4 @@ The detailed reports in each numbered directory are the evidence records. The pa
 
 **Final ZIP:** `SEG_PROJECT_CONTINUITY_PACKAGE_FINAL.zip`
 
-**SHA-256:** يُعاد حسابه بعد إعادة الضغط والتحقق.
+**SHA-256:** Recorded in the sidecar file `SEG_PROJECT_CONTINUITY_PACKAGE_FINAL.sha256` after final archive verification.
