@@ -8,7 +8,7 @@
 
 ## Latest checkpoint evidence
 
-The package now includes the read-only Command 02 production-readiness evidence and the Command 03 `SEG_CONTENT_LIBRARY` structure-completion report. The content-library structure is empty and contains no medical content. The current package inventory contains 42 files; the archive must be rebuilt and verified before repository publication.
+The package now includes the read-only Command 02 production-readiness evidence and the Command 03 `SEG_CONTENT_LIBRARY` structure-completion report. The content-library structure is empty and contains no medical content. The current package inventory contains 43 files; the archive must be rebuilt and verified after repository publication.
 
 The source publication boundary excludes `.env` files, secrets, OAuth tokens, database credentials, `node_modules`, build outputs, `.git`, and temporary local artifacts. The approved source, reports, governance records, and empty pipeline structure remain included.
 

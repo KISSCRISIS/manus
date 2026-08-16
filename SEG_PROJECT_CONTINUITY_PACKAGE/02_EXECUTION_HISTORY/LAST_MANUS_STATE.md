@@ -1,6 +1,6 @@
 # LAST_MANUS_STATE
 
-**State type:** Continuity checkpoint after Command 03 and before final repository publication
+**State type:** Continuity checkpoint after verified GitHub repository publication
 
 **Checkpoint date:** 16 August 2026
 
@@ -20,15 +20,15 @@
 
 ## Current
 
-**Final repository publication checkpoint.**
+**Repository publication completed.**
 
-Accessibility Review, the Vite/Express Phase 3 implementation, the read-only target-deployment Production Readiness Check, and the empty `SEG_CONTENT_LIBRARY` structure are complete. The current task is to publish the verified source snapshot to the confirmed private GitHub repository. This is not a request to change authentication, the database, protected routing, medical content, or approved assets.
+Accessibility Review, the Vite/Express Phase 3 implementation, the read-only target-deployment Production Readiness Check, the empty `SEG_CONTENT_LIBRARY` structure, and the first safe source publication are complete. Commit `42e21eb43ae2371625a960c92210d103bd972d76` is on `main` at `https://github.com/KISSCRISIS/manus`. The repository was verified as public; no visibility change was performed. This publication did not change authentication, the database, protected routing, medical content, or approved assets.
 
 ## Pending
 
 | Pending workstream | Boundary |
 |---|---|
-| GitHub source publication | Publish the verified source snapshot to `KISSCRISIS/manus` on `main`, excluding secrets, dependencies, build outputs, and temporary local artifacts. |
+| GitHub source publication | Completed | `SEG_GITHUB_UPLOAD_MANIFEST.md`; commit `42e21eb43ae2371625a960c92210d103bd972d76` verified on `origin/main`; 288 tracked files; forbidden paths absent. |
 
 ## Release gate
 

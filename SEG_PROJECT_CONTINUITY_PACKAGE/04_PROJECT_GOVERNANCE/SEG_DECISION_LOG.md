@@ -17,3 +17,5 @@
 ## Decision protocol
 
 أي قرار جديد يجب أن يذكر النطاق، السبب، الملفات المتأثرة، المخاطر، طريقة التحقق، وخطة التراجع. لا يُعتبر الكلام غير الموثق داخل مهمة سابقة تفويضاً دائماً لتغيير الكود أو المحتوى أو البنية.
+
+| D-012 | نشر المصدر النهائي المفحوص إلى `KISSCRISIS/manus` على `main` مع استبعاد الأسرار والاعتماديات وملفات البناء المؤقتة | Accepted / Completed | `SEG_GITHUB_UPLOAD_MANIFEST.md`; commit `42e21eb43ae2371625a960c92210d103bd972d76`; remote verified with 288 tracked files. The repository is public; no visibility change was performed. |

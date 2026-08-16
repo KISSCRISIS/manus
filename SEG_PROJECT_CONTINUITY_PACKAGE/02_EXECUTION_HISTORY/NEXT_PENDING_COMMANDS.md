@@ -23,11 +23,13 @@ pnpm build
 
 **Evidence:** `SEG_CONTENT_LIBRARY_STRUCTURE_COMPLETION_REPORT.md`. The approved empty directory structure was created with 27 directories and 0 content files. No medical content was imported or processed, and existing libraries, governance records, Atlas structure, and Visual Assets Registry were preserved.
 
-## Current authorized action — GitHub source publication
+## Current authorized action — GitHub source publication — COMPLETED (16 August 2026)
 
-Publish the verified source snapshot to `KISSCRISIS/manus` on `main`. Exclude `.env` files, secrets, OAuth tokens, database credentials, `node_modules`, build outputs, temporary local artifacts, and `.git`. Preserve source code, reports, governance records, content-library structure, and approved transfer documentation.
+The verified source snapshot was published to `KISSCRISIS/manus` on `main` at commit `42e21eb43ae2371625a960c92210d103bd972d76`. Remote verification found 288 tracked files, no forbidden dependency/build/secret paths, and a clean local worktree. The repository visibility was verified as public; no visibility change was performed.
 
-After publication, update `LAST_MANUS_STATE.md`, `CURRENT_STATUS_CHECKLIST.md`, and the decision log with the commit and remote verification evidence. Do not begin a new implementation wave without a separate authorization.
+Evidence: `SEG_GITHUB_UPLOAD_MANIFEST.md`, `LAST_MANUS_STATE.md`, `CURRENT_STATUS_CHECKLIST.md`, and the remote commit/tree verification record. The continuity archive was rebuilt separately with 43 files; checksum recorded in sidecar `SEG_PROJECT_CONTINUITY_PACKAGE_FINAL.sha256`.
+
+No new implementation wave is pending. Any further work requires a separate explicit authorization.
 
 ## Stop conditions
 

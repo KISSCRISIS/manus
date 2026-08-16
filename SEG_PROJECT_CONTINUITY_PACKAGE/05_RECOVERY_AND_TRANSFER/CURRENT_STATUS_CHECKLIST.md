@@ -14,8 +14,9 @@
 | Medical Journal content activation | Blocked | Requires governed source, review, rights, taxonomy, and audit trail. |
 | Drug Reference activation | Blocked | Requires separate audit and explicit authorization. |
 | Next.js migration | Deferred | Use the migration plan only after a separate authorization checkpoint. |
-| Target deployment URL | Verified read-only with gaps | `https://seg-guide-bjjkqn7t.manus.space` loaded public surfaces and assets; target `/healthz` returned 404 and the runtime was not proven to expose the local Phase 3 health endpoint. |
-| Continuity package | Repack required before publication | Sync Command 02/03 evidence, rebuild `SEG_PROJECT_CONTINUITY_PACKAGE_FINAL.zip`, and verify its contents/hash before the GitHub commit. |
+| Target deployment URL | Verified read-only with gaps | `https://seg-guide-bjjkqn7t.manus.space` loaded public surfaces and assets; target `/healthz` returned 404 and the runtime was not proven to expose the local Phase 3 health endpoint. | 
+| GitHub source publication | Complete | `https://github.com/KISSCRISIS/manus`, branch `main`, commit `42e21eb43ae2371625a960c92210d103bd972d76`, 288 tracked files; repository visibility verified as public. |
+| Continuity package | Rebuilt and verified | `SEG_PROJECT_CONTINUITY_PACKAGE_FINAL.zip`; 43 files; checksum recorded in sidecar `SEG_PROJECT_CONTINUITY_PACKAGE_FINAL.sha256`; no prohibited archive entries. |
 
 ## Known external blocker
 
