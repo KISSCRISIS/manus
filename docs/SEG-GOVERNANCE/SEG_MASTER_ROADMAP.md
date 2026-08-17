@@ -73,7 +73,7 @@ Remaining:
 
 ------------------------------------------------------------------------
 
-# Phase 4 --- Content Pipeline
+# Phase 4 --- Content Pipeline Preparation
 
 Status:
 
@@ -81,20 +81,22 @@ Status:
 
 Objective:
 
-Prepare a controlled pipeline for transforming medical resources into
-SEG-ready content.
+Prepare a controlled, traceable, and reversible pipeline for supplied medical resources without modifying original sources or exposing learner-facing content.
 
-Main activities:
+Governed activities:
 
--   Content inventory.
--   Source classification.
--   Extraction workflow.
--   Content normalization.
--   SEG schema preparation.
+-   READ_ONLY source handoff, inventory, and immutable preservation.
+-   Metadata and Source Mapping for provenance, version, checksum, rights, locators, taxonomy, and explicit track context.
+-   Canonical Schema Validation against the versioned manifest contract.
+-   Rights and Provenance Review with fail-closed blockers.
+-   Explicitly authorized bounded Pilot Conversion, when required, with all outputs `Pending Clinical Review` and `NOT_APPROVED`.
+-   Preparation of Content QA, integration dry-run, release, and rollback evidence.
+
+Phase 4 does not perform clinical review, approval, activation, database import, application integration, commit, push, deployment, or publication.
 
 ------------------------------------------------------------------------
 
-# Phase 5 --- Medical Content Integration
+# Phase 5 --- Medical Content Governance and Integration
 
 Status:
 
@@ -102,29 +104,39 @@ Status:
 
 Process:
 
-    Source
+    Source Handoff
       ↓
-    Extraction
+    READ_ONLY Intake / Source Mapping
       ↓
-    Cleaning
+    Canonical Schema Validation
       ↓
-    SEG Schema
+    Rights and Provenance Review
+      ↓
+    Bounded Pilot Conversion (if explicitly authorized)
       ↓
     Medical Review
       ↓
-    Approval
+    Governance Registration / Approval Evidence
       ↓
-    Database Integration
+    Content QA
       ↓
-    Application
+    Separate Implementation Authorization
+      ↓
+    Integration Dry-Run
+      ↓
+    Controlled Release / Activation of approved records only
 
 Required governance:
 
--   Source.
--   Version.
--   Reviewer.
--   Review Status.
--   Audit Trail.
+-   Source ID, exact location, version, and SHA-256 checksum.
+-   Rights evidence for text, images, and display scope.
+-   Explicit taxonomy and professional-track context without mixing.
+-   Qualified reviewer identity/role, cited locators, decision, and review dates.
+-   Append-only audit trail and stable record/artifact identifiers.
+-   Deterministic Content QA for the exact candidate hash.
+-   Explicit implementation target, idempotency, isolation, and rollback evidence.
+
+A structural or QA `PASS` does not replace clinical review or approval. Missing evidence stops the handoff.
 
 ------------------------------------------------------------------------
 
