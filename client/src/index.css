@@ -536,3 +536,7 @@ html.light .seg-app main .seg-dashboard-greeting .text-cyan-200,
 html.light .seg-app main .seg-dashboard-role .text-cyan-200,
 html.light .seg-app main .seg-dashboard-card:not(.seg-dashboard-core) .text-cyan-200,
 html.light .seg-app main .seg-internal-stage .text-cyan-200 { color: #0F766E !important; }
+
+/* Greeting Contrast Final Micro Patch — Light mode only, greeting descendants only */
+html.light .seg-app main .seg-dashboard-greeting > div > h1.text-white { color: #0F172A !important; }
+html.light .seg-app main .seg-dashboard-greeting > div > p.text-slate-300 { color: #334155 !important; }
