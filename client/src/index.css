@@ -477,3 +477,62 @@ html.light .seg-atlas-navigation a { border-color: #BAE6FD; background: #FFFFFF;
 html.light .seg-atlas-navigation a:hover { border-color: #0D9488; background: #F0FDFA; }
 @media (max-width: 640px) { .seg-workspace-shell::after { right: 1rem; width: 7rem; }.seg-workspace-metric { min-height: 5.25rem; padding: .65rem; }.seg-workspace-action { min-height: 7.75rem; }.seg-atlas-navigation { gap: .4rem; }.seg-atlas-navigation a { padding: .36rem .56rem; font-size: .61rem; } }
 @media (prefers-reduced-motion: reduce) { .seg-atlas-navigation a { transition-duration: 1ms !important; } }
+
+
+/* UI Patch 1 — Mobile Readability & Responsive Layout (UI-only, reversible) */
+@media (max-width: 430px) {
+  /* Landing: preserve the approved composition while lifting the smallest text floor. */
+  .seg-landing-v4-kicker { font-size: .62rem; }
+  .seg-landing-v4-copy > p:not(.seg-landing-v4-kicker) { font-size: 1rem; line-height: 1.6; }
+  .seg-landing-v4-benefits article { min-height: 3.55rem; }
+  .seg-landing-v4-benefits strong { font-size: .65rem; }
+  .seg-landing-v4-benefits span { margin-top: .24rem; color: #a9bfce; font-size: .6rem; line-height: 1.25; }
+  .seg-landing-v4-metrics span { font-size: .62rem; }
+
+  /* Login: keep the complete auth card readable in the first viewport. */
+  .seg-login-v2-card { padding-right: 1rem; padding-left: 1rem; }
+  .seg-login-v2-heading h1 { font-size: clamp(1.85rem, 9vw, 2.1rem); }
+  .seg-login-v2-heading p { font-size: .9rem; }
+  .seg-login-v2-options { align-items: flex-start; gap: .55rem; font-size: .88rem; }
+  .seg-login-v2-remember, .seg-login-v2-options > button { white-space: nowrap; }
+  .seg-login-v2-socials { gap: .45rem; }
+  .seg-login-v2-social { min-height: 3.2rem; gap: .3rem; font-size: .75rem; }
+
+  /* Registration: show the form first on narrow screens without changing DOM or auth logic. */
+  .seg-register-v2-form-shell { order: -1; padding-right: 1rem; padding-left: 1rem; }
+  .seg-register-v2-story { order: 2; }
+  .seg-register-v2-languages { gap: .45rem; }
+  .seg-register-v2-languages button { min-height: 44px; padding: .5rem .7rem; font-size: .76rem; }
+  .seg-register-v2-form-heading { margin: 1.25rem 0 1.35rem; }
+  .seg-register-v2-form-heading p { font-size: .9rem; line-height: 1.45; }
+  .seg-register-v2-form { gap: 1.35rem; }
+  .seg-register-v2-form section { gap: .72rem; }
+}
+
+@media (max-width: 360px) {
+  .seg-landing-v4-main { width: calc(100% - .75rem); }
+  .seg-landing-v4-benefits { max-width: 18rem; }
+  .seg-login-v2-main { padding-right: .75rem; padding-left: .75rem; }
+  .seg-login-v2-card { padding-right: .85rem; padding-left: .85rem; }
+  .seg-login-v2-social { font-size: .72rem; }
+  .seg-register-v2-form-shell { padding-right: .85rem; padding-left: .85rem; }
+}
+
+
+/* Dashboard UX Patch — confirmed Light contrast issues only (UI-only, reversible) */
+html.light .seg-app aside nav button { color: #334155; }
+html.light .seg-app main .seg-dashboard-greeting .text-slate-400,
+html.light .seg-app main .seg-dashboard-greeting .text-slate-300,
+html.light .seg-app main .seg-dashboard-role .text-slate-400,
+html.light .seg-app main .seg-dashboard-card:not(.seg-dashboard-core) .text-slate-300,
+html.light .seg-app main .seg-dashboard-card:not(.seg-dashboard-core) .text-slate-400,
+html.light .seg-app main .seg-dashboard-card:not(.seg-dashboard-core) .text-slate-500,
+html.light .seg-app main .seg-dashboard-card:not(.seg-dashboard-core) .text-slate-200 { color: #475569 !important; }
+html.light .seg-app main .seg-dashboard-greeting .text-white,
+html.light .seg-app main .seg-dashboard-role .text-white,
+html.light .seg-app main .seg-dashboard-card:not(.seg-dashboard-core) > div > h2,
+html.light .seg-app main .seg-dashboard-card:not(.seg-dashboard-core) > div > div > h2 { color: #0F172A !important; }
+html.light .seg-app main .seg-dashboard-greeting .text-cyan-200,
+html.light .seg-app main .seg-dashboard-role .text-cyan-200,
+html.light .seg-app main .seg-dashboard-card:not(.seg-dashboard-core) .text-cyan-200,
+html.light .seg-app main .seg-internal-stage .text-cyan-200 { color: #0F766E !important; }

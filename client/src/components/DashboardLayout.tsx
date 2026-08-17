@@ -20,11 +20,16 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
 
   function navigateTo(path: string) {
     if (path.startsWith("#")) {
-      const target = document.querySelector(path);
-      const reduceMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
-      target?.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
-      setActiveSection(path.slice(1));
-      if (!reduceMotion) window.setTimeout(() => setActiveSection(""), 240);
+      const target = document.querySelector<HTMLElement>(path);
+      if (target) {
+        const reduceMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+        const header = document.querySelector<HTMLElement>(".seg-app > div > header");
+        const headerHeight = header?.getBoundingClientRect().height ?? 52;
+        const targetTop = target.getBoundingClientRect().top + window.scrollY - headerHeight - 16;
+        window.scrollTo({ top: Math.max(0, targetTop), behavior: reduceMotion ? "auto" : "smooth" });
+        setActiveSection(path.slice(1));
+        if (!reduceMotion) window.setTimeout(() => setActiveSection(""), 320);
+      }
     } else {
       setLocation(path);
     }
