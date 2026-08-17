@@ -1,0 +1,17 @@
+# SEG Content Package Structure
+
+Standard structure:
+
+SEG_CONTENT_PACKAGE/
+
+00_README.md
+01_PROJECT_SCHEMA/
+02_SOURCE_CONTENT/
+03_REFERENCES/
+04_QUESTIONS/
+05_IMAGES_TABLES/
+06_EXISTING_APP_DATA/
+07_REVIEW_AUDIT/
+08_NOTES/
+
+Original sources remain preserved.
